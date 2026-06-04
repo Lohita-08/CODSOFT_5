@@ -7,40 +7,46 @@
         body {
             font-family: Arial;
             background: linear-gradient(to right, #4facfe, #00f2fe);
-            text-align: center;
             margin: 0;
-            padding: 0;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .container {
             background: white;
-            width: 400px;
-            margin: 80px auto;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+            width: 500px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
         }
 
         h1 {
+            margin-bottom: 20px;
             color: #333;
         }
 
         input {
-            width: 80%;
-            padding: 10px;
-            margin: 10px;
-            border-radius: 8px;
+            width: 90%;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 10px;
             border: 1px solid #ccc;
+            font-size: 16px;
         }
 
         button {
-            padding: 10px 20px;
+            padding: 12px 25px;
             background: #4facfe;
             border: none;
             color: white;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
+            margin-top: 10px;
         }
 
         button:hover {
@@ -49,8 +55,9 @@
 
         #result {
             margin-top: 20px;
-            font-size: 20px;
+            font-size: 22px;
             color: green;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -80,7 +87,7 @@
             let radio = document.getElementById("radio").value;
             let news = document.getElementById("news").value;
 
-            // simple formula (demo purpose)
+            // Simple prediction formula (demo)
             let sales = (0.05 * tv) + (0.1 * radio) + (0.02 * news);
 
             document.getElementById("result").innerHTML =
